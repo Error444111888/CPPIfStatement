@@ -12,49 +12,47 @@ using namespace std;
 int main()
 {
 	
-	double CurrentBTCUSDPrice = 8542.3547;
-	double InitialBTCPrice = 6502.532;
-	double BoughtBTCAmount = 10;
+	double P = 8542.3547;
+	double x = 6502.532;
+	double y = 10;
 
-	double InitialBTCTotalUSD = BoughtBTCAmount * InitialBTCPrice;
-	double CurrentBTCTotalUSD = BoughtBTCAmount * CurrentBTCUSDPrice;
-
-
-	double CurrentLTCUSDPrice = 56.4678;
-	double InitialLTCUSDPrice = 43.15;
-	double BoughtLTCAmount = 100;
-
-	double InitialLTCTotalUSD = BoughtBTCAmount * InitialLTCUSDPrice;
-	double CurrentLTCTotalUSD = BoughtBTCAmount * CurrentLTCUSDPrice;
-
-	double InitialLTCValue = (InitialBTCPrice * BoughtBTCAmount) / InitialLTCUSDPrice;
-	double CurrentLTCValue = (CurrentBTCUSDPrice * BoughtBTCAmount) / CurrentLTCUSDPrice;
+	double r = y * x;
+	double t = y * P;
 
 
+	double f = 56.4678;
+	double g = 43.15;
+	double h = 100;
 
-	// If there`s profit in the BTC
-	if (InitialBTCTotalUSD < CurrentBTCTotalUSD)
+	double v = y * g;
+	double b = y * f;
+
+	double n = (x * y) / g;
+	double m = (P * y) / f;
+
+
+
+	if (r < t)
 	{
-		if (CurrentLTCValue > InitialLTCValue)
+		if (m > n)
 		{
 
 			//You can use multiple cout under each other
 			cout << "Good news" << endl;
 			cout << "You have some USD and LTC profit" << endl;
-			cout << "You can collect them if you sell. Sooooo..." << endl;
-			cout << "Sell! Sell! Sell!" << endl;
+			
 		}
 		
 		
 	}
 	
 
-	else if (InitialBTCTotalUSD > CurrentBTCTotalUSD)
+	else if (r > t)
 	{
 		cout << "Buy Buy Buy" << endl;
 	}
 
-	else if (InitialBTCTotalUSD == CurrentBTCTotalUSD)
+	else if (r == t)
 	{
 		cout << "Wait Wait Wait" << endl;
 	}
